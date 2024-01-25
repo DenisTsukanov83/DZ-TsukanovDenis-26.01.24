@@ -1,0 +1,132 @@
+// main: style.less
+
+.resume {
+    display: grid;
+    grid-template-columns: 21% 79%;
+
+    &-content {
+        display: none;
+        width: 100%;
+        .padding(65, 100, 0, 85);
+    }
+
+    &-title {
+        .title;
+    }
+
+    &-subtitle {
+        .font-size(24);
+        font-family: 'catamaran';
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    &-column {
+        .padding(0, 0, 0, 30);
+    }
+
+    &-row {
+        display: flex;
+        .gap(50);
+        .padding(7, 0, 35, 0);
+    }
+
+    &-item {
+        .width(250);
+        &-title {
+            .font-size(14);
+            font-family: 'catamaran';
+            font-weight: 900;
+            text-transform: uppercase;
+            .padding(0, 10, 0, 10);
+            background-color: @main-color;
+            width: max-content;
+        }
+
+        &-subtitle {
+            .font-size(19);
+            font-family: 'catamaran';
+            font-weight: 900;
+            .margin-top(2);
+        }
+
+        &-text {
+            .margin-top(0);
+            text-align: justify;
+            font-family: 'Yu-gotic-bold';
+            .font-size(12);
+        }
+    }
+
+    &-devider {
+        width: 100%;
+        border-bottom: calc((2 / 16) * 1rem) dotted @black;
+        .margin-bottom(20);
+    }
+}
+
+@media screen and (max-width: 600px ){
+    .resume {
+        display: grid;
+        grid-template-columns: 21% 79%;
+    
+        &-content {
+            display: none;
+            /* display: block; */
+            .padding(10, 10, 10, 10);
+        }
+    
+        &-title {
+            .padding(45, 0, 20, 0);
+            height: max-content;
+            border: calc((6 / 16) * 1rem) dotted @black;
+        }
+
+        &-title h2 {
+            .font-size(220);
+        }
+    
+        &-subtitle {
+            .font-size(110);
+            .margin-top(100);
+        }
+    
+        &-column {
+            .padding(0, 0, 0, 30);
+        }
+    
+        &-row {
+            display: flex;
+            flex-direction: column;
+            .gap(50);
+            .padding(7, 0, 35, 0);
+            .margin-left(235);
+        }
+    
+        &-item {
+            .width(1130);
+            .margin-top(60);
+            .margin-bottom(100);
+            &-title {
+                .font-size(75);
+                .padding(0, 10, 0, 10);
+            }
+    
+            &-subtitle {
+                .font-size(85);
+                .margin-top(2);
+            }
+    
+            &-text {
+                .margin-top(0);
+                .font-size(57);
+            }
+        }
+    
+        &-devider {
+            width: 100%;
+            border-bottom: calc((8 / 16) * 1rem) dotted @black;
+            .margin-bottom(20);
+        }
+    }
+}

@@ -1,0 +1,87 @@
+// main: style.less
+
+.contact {
+    &-content {
+        display: none;
+        width: 100%;
+        .padding(65, 100, 0, 85);
+    }
+
+    &-title {
+        .title;
+    }
+
+    &-container {
+        width: 100%;
+        .padding(0, 150, 0, 24);
+    }
+
+    &-subtitle {
+        font-family: 'Yu-gotic-light';
+        .font-size(31);
+    }
+
+    &-subtitle span {
+        font-weight: 900;
+        font-family: 'catamaran';
+        .font-size(34);
+    }
+
+    &-text {
+        font-family: 'Yu-gotic-bold';
+        .font-size(12);
+    }
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        .margin-top(105);
+        .padding(0, 0, 0, 12);
+    }
+
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: max-content;
+        .gap(30);
+
+        &-img {
+            .width(106);
+        }
+
+        &-img img {
+            width: 100%;
+        }
+
+        &-text {
+            .font-size(16);
+            font-family: 'catamaran';
+            font-weight: 900;
+            .line-height(28);
+        }
+    }
+
+    &-thank {
+        .font-size(34);
+        font-family: 'catamaran';
+        text-align: center;
+        text-transform: uppercase;
+        .margin-top(51);
+        .margin-left(133);
+        .letter-spacing(2);
+    }
+}
+
+
+@media screen and (max-width: 1200) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+    
+}
+
+@media screen and (min-width: 600px ) and (max-width: 767px) {
+    
+}

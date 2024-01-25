@@ -1,0 +1,149 @@
+// main: style.less
+
+.header {
+    width: 100%;
+    .height(730);
+    .box-shadow(-1, 7, 14, 7, black);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+
+    &-content {
+        .padding(200, 0, 200, 131);
+    }
+
+    &-content h3 {
+        font-family: 'Catamaran';
+        text-transform: uppercase;
+        .font-size(42);
+
+    }
+
+    &-content h1 {
+        font-family: 'Catamaran';
+        font-weight: bold;
+        .font-size(72);
+        text-transform: uppercase;
+        .letter-spacing(1);
+        .line-height(103);
+    }
+
+    &-content h1 span:nth-child(2) {
+        -webkit-text-stroke: 0.1875rem @main-color;
+        color: white;
+        font-family: 'Yu-gotic-bold';
+        font-weight: bold;
+        .font-size(62);
+        .margin-left(7);
+        .letter-spacing(3);
+    }
+
+    &-subtitle {
+        text-transform: uppercase;
+        font-family: 'Catamaran';
+        font-weight: bold;
+        .font-size(16);
+        .margin-top(-10);
+        background-color: @main-color;
+        width: max-content;
+        .padding(2, 8, 0, 8);
+        color: @black;
+
+    }
+
+    &-text {
+        font-family: 'Yu-gotic-bold';
+        .width(433);
+        text-align: justify;
+        .font-size(13);
+        .margin-top(19);
+    }
+
+    &-photo img {
+        width: 100%;
+        height: max-content;
+    }
+
+    & button {
+        font-family: 'Catamaran';
+        font-weight: bold;
+        text-transform: uppercase;
+        .font-size(18);
+        .padding(10, 10, 8, 10);
+        .width(180);
+        .margin-top(15);
+        .border-radius(30);
+        border: none;
+        background-color: @main-color;
+    }
+
+    ;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0 !important;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+        height: max-content;
+
+
+        &-photo {
+            .padding(350, 350, 120, 350);
+            position: relative;
+            z-index: 2;
+        }
+
+        &-content {
+            .padding(0, 0, 100, 0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & h3 {
+            position: absolute;
+            .top(0);
+            .left(0);
+            .font-size(120);
+            .padding(100, 850, 570, 100);
+            background-color: @main-color;
+            z-index: 0;
+            width: 100%
+        }
+
+        &-content h1 {
+            .font-size(220);
+        }
+
+        &-content h1 span:nth-child(2) {
+            .font-size(197);
+            -webkit-text-stroke: 0.3125rem @main-color;
+        }
+
+        &-subtitle {
+            .font-size(65);
+            .margin-top(100);
+            .padding(2, 24, 0, 24);
+        }
+
+        &-text {
+            .margin-top(100);
+            .width(1260);
+            .font-size(42);
+            text-align-last: justify;
+        }
+
+        & button {
+            .font-size(50);
+            .padding(19, 10, 13, 10);
+            .width(500);
+            .margin-top(100);
+            .border-radius(60);
+        }
+    }
+}

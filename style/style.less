@@ -1,0 +1,74 @@
+// compress: false, sourceMap: true
+@import url(_variables.less);
+@import url(_mixins.less);
+@import url(_functions.less);
+@import url(_fonts.less);
+@import url(_theme.less);
+@import url(_header.less);
+@import url(_about.less);
+@import url(_resume.less);
+@import url(_testimon.less);
+@import url(_contact.less);
+@import url(_portfolio.less);
+@import url(_acide-menu.less);
+@import url(_hamburger.less);
+@import url(_modal-1.less);
+@import url(_modal-2.less);
+@import url(_modal-3.less);
+@import url(_modal-4.less);
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 1vw;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(../img/beton.jpeg);
+    background-size: contain;
+
+    .padding(88, 140, 88, 140);
+}
+
+.container {
+    width: 100%;
+}
+
+.active {
+    color: @white !important;
+}
+
+.grid {
+    display: grid !important;
+}
+
+.lang-btns {
+    position: absolute;
+    .right(175);
+    .top(100);
+    display: flex;
+    .gap(10);
+    & div {
+        .width(30);
+        .height(30);
+        opacity: 40%;
+        cursor: pointer;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-active {
+        opacity: 100% !important;
+    }
+}

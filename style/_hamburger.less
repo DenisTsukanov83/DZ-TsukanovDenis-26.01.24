@@ -1,0 +1,27 @@
+// main: style.less
+
+.hamburger {
+    position: absolute;
+    z-index: 3;
+    .right(100);
+    .top(155);
+    .width(100);
+    height: max-content;
+    display: none;
+    flex-direction: column;
+    .gap(10);
+
+    & div {
+        width: 100%;
+        .height(15);
+        background-color: @black;
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+}
+

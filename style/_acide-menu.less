@@ -1,0 +1,73 @@
+// main: style.less
+
+.aside-menu {
+    position: fixed;
+    .right(166);
+    .top(292);
+    .width(40);
+    height: max-content;
+    background-color: @main-color;
+    .padding(20, 10, 20, 10);
+    .border-radius(25);
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .gap(11);
+        list-style-type: none;
+    }
+
+    & ul li {
+        .width(20);
+        .height(20);
+        cursor: pointer;
+        
+    }
+
+    &-item {
+        display: block;
+        width: 100%;
+        .height(20);
+        background-size: cover;
+    }
+
+    &-item-1 {
+        background-image: url(../img/aside-menu/home-black.svg);
+    }
+
+    &-item-2 {
+        background-image: url(../img/aside-menu/man-white.svg);
+    }
+
+    &-item-3 {
+        background-image: url(../img/aside-menu/siutecase-black.svg);
+    }
+
+    &-item-4 {
+        background-image: url(../img/aside-menu/monitor-black.svg);
+    }
+
+    &-item-5 {
+        background-image: url(../img/aside-menu/megafon-black.svg);
+    }
+
+    &-item-6 {
+        background-image: url(../img/aside-menu/plane-black.svg);
+    }
+
+    &-devider {
+        .height(15);
+        border-left: calc((3 / 16) * 1rem) dotted @black;
+
+    }
+}
+
+@media screen and (max-width: 600px ) {
+    .aside-menu {
+        display: none;
+    }
+}
+
+

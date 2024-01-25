@@ -1,0 +1,501 @@
+// main: style.less
+
+.about {
+    display: grid;
+    grid-template-columns: 21% 79%;
+    .margin-top(109);
+    .height(744);
+    .box-shadow(-1, 7, 14, 7, @black);
+
+    &-nav {
+        width: 100%;
+        .height(744);
+        background-color: @main-color;
+    }
+
+    &-photo {
+        width: inherit;
+        .height(232);
+    }
+
+    &-photo img {
+        width: 100%;
+    }
+
+    &-menu {
+        display: flex;
+        justify-content: center;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            .gap(3);
+            align-items: center;
+            flex-direction: column;
+            list-style-type: none;
+            .padding(66, 0, 0, 0);
+            .font-size(22);
+        }
+
+        li a {
+            font-family: 'Catamaran';
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: @black;
+            .line-height(5);
+        }
+
+        li a:hover {
+            color: @white;
+        }
+
+        &-devider {
+            width: 0;
+            .height(25);
+            border-right: calc((3 / 16) * 1rem) dotted @black;
+        }
+
+        &-round {
+            .width(7);
+            .height(7);
+            border-radius: 100%;
+            background-color: @black;
+        }
+    }
+
+    &-container {
+        width: 100%;
+        .padding(0, 0, 0, 24);
+    }
+
+
+    &-content {
+        width: 100%;
+        .padding(65, 100, 0, 85);
+        display: block;
+    }
+
+    &-title {
+        .title;
+    }
+
+    &-text {
+        .margin-top(30);
+    }
+
+    &-text h4 {
+        font-family: 'Yu-gotic-light';
+        .font-size(31);
+    }
+
+    &-text h4 span {
+        font-weight: 900;
+        font-family: 'catamaran';
+        .font-size(34);
+    }
+
+    &-text br {
+        display: none;
+    }
+
+    &-text div {
+        font-family: 'Yu-gotic-bold';
+        .width(830);
+        text-align: justify;
+        .font-size(12);
+        .margin-top(5);
+    }
+
+    &-wrapper {
+        display: grid;
+        grid-template-columns: 67% 33%;
+        .margin-top(29);
+    }
+
+    &-do {
+        .padding(2, 0, 10, 40);
+
+        & h3 {
+            font-weight: 900;
+            font-family: 'catamaran';
+            .font-size(26);
+        }
+
+        &-item {
+            display: grid;
+            grid-template-columns: 30% 69%;
+            gap: 1%;
+            width: 100%;
+            .margin-top(10);
+        }
+
+        &-img {
+            .width(50);
+            height: max-content;
+
+        }
+
+        &-img img {
+            width: 100%;
+        }
+
+        &-subtitle {
+            .font-size(14);
+            font-family: 'catamaran';
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        &-text {
+            .font-size(11);
+            width: 100%;
+            text-align: justify;
+            .letter-spacing(-0.5);
+            text-align-last: justify;
+        }
+
+        & .first {
+            & .about-do-img {
+                .width(107);
+                .margin-top(-17);
+                .margin-left(-25);
+            }
+
+            &>div:nth-child(2) {
+                .margin-left(5);
+                .margin-top(-3);
+            }
+        }
+
+        & .second {
+            & .about-do-img {
+                .width(67);
+                .margin-top(-7);
+                .margin-left(-2);
+            }
+
+            &>div:nth-child(2) {
+                .margin-left(5);
+                .margin-top(-13);
+            }
+        }
+
+        & .third {
+            .margin-top(20);
+
+            & .about-do-img {
+                .width(78);
+                .margin-top(-3);
+                .margin-left(-10);
+            }
+
+            &>div:nth-child(2) {
+                .margin-left(5);
+                .margin-top(-4);
+            }
+        }
+    }
+
+    &-experience {
+        display: grid;
+        grid-template-columns: 1fr 0 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        .height(320);
+        background-color: @black;
+        .padding(30, 0, 30, 0);
+
+        &__item {
+            .padding(0, 30, 0, 30);
+
+            &_first>div {
+                border-bottom: calc((2 / 16) * 1rem) dotted @white;
+                .padding(10, 30, 40, 30);
+            }
+
+            &_second>div {
+                border-bottom: calc((2 / 16) * 1rem) dotted @white;
+                .padding(10, 30, 40, 30);
+            }
+
+            &_third>div {
+                .padding(20, 30, 40, 15);
+            }
+
+            &_fourth>div {
+                .padding(20, 30, 40, 15);
+            }
+        }
+
+        &__item>div h4 {
+            text-align: center;
+            font-family: 'Yu-gotic-bold';
+            color: @main-color;
+            .font-size(48);
+        }
+
+        &__item>div div {
+            text-align: center;
+            color: @white;
+            text-transform: uppercase;
+            font-family: 'catamaran';
+            font-weight: 900;
+            .font-size(13);
+            .margin-top(-12);
+        }
+
+        &-devider {
+            width: 0;
+            .height(257);
+            border-right: calc((2 / 16) * 1rem) dotted @white;
+            grid-column: 2;
+            grid-row: 1 / 3;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        display: grid;
+        grid-template-columns: 100%;
+        .height(744);
+
+        &-photo {
+            display: none;
+        }
+
+        &-nav {
+            display: flex;
+            position: absolute;
+            background-color: @main-bg;
+            width: 55%;
+            .top(0);
+            .height(1700);
+            z-index: 5;
+            border: 0.8rem dotted @black;
+            .left(-880);
+        }
+
+        &-menu {
+            width: 100%;
+
+            &-devider {
+                width: 0;
+                .height(90);
+                border-right: calc((12 / 16) * 1rem) dotted @black;
+            }
+
+            &-round {
+                .width(25);
+                .height(25);
+                border-radius: 100%;
+                background-color: @black;
+            }
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            .gap(15);
+            align-items: center;
+            flex-direction: column;
+            list-style-type: none;
+            .padding(0, 0, 0, 0);
+            .font-size(80);
+        }
+
+        li a {
+            font-family: 'Catamaran';
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: @black;
+            .line-height(5);
+        }
+
+        li a:hover {
+            color: @white;
+        }
+
+
+        &-container {
+            width: 100%;
+            .padding(0, 0, 0, 24);
+        }
+    
+    
+        &-content {
+            .padding(10, 10, 10, 10);
+            display: block;
+        }
+
+        &-title {
+            .padding(45, 0, 20, 0);
+            height: max-content;
+            border: calc((6 / 16) * 1rem) dotted black;
+        }
+    
+        &-title h2 {
+            .font-size(220);
+        }
+    
+        &-text {
+            .margin-top(100);
+        }
+    
+        &-text h4 {
+            text-align: center;
+            .font-size(100);
+            margin: auto;
+        }
+    
+        &-text h4 span {
+            .font-size(110);
+        }
+
+        &-text br {
+            display: block;
+        }
+    
+        &-text div {
+            width: 99%;
+            .font-size(42);
+            .margin-top(100);
+        }
+    
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            .margin-top(29);
+        }
+    
+        &-do {
+            .padding(2, 120, 200, 455);
+    
+            & h3 {
+                text-align: center;
+                .font-size(110);
+                .margin-left(-282);
+                .margin-top(100);
+            }
+    
+            &-item {
+                display: grid;
+                grid-template-columns: 23% 54%;
+                gap: 0;
+                width: 100%;
+                .margin-top(80);
+            }
+    
+            &-img {
+                .width(375);
+            }
+    
+            &-img img {
+                width: 100%;
+            }
+    
+            &-subtitle {
+                .font-size(62);
+                .margin-left(-320);
+            }
+    
+            &-text {
+                .font-size(42);
+                width: 100%;
+                text-align: justify;
+                .letter-spacing(-0.5);
+                text-align-last: justify;
+            }
+    
+            & .first {
+                & .about-do-img {
+                    .width(275);
+                    .margin-top(60);
+                    .margin-left(-25);
+                }
+    
+                &>div:nth-child(2) {
+                    .margin-left(5);
+                    .margin-top(-3);
+                }
+            }
+    
+            & .second {
+                & .about-do-img {
+                    .width(176);
+                    .margin-top(90);
+                    .margin-left(22);
+                }
+    
+                &>div:nth-child(2) {
+                    .margin-left(5);
+                    .margin-top(-13);
+                }
+            }
+    
+            & .third {
+                .margin-top(20);
+    
+                & .about-do-img {
+                    .width(202);
+                    .margin-top(88);
+                    .margin-left(12);
+                }
+    
+                &>div:nth-child(2) {
+                    .margin-left(5);
+                    .margin-top(-4);
+                }
+            }
+        }
+    
+        &-experience {
+            grid-template-columns: repeat(2, 1fr);
+            .gap(70);
+            height: max-content;
+            width: 80%;
+            margin: auto;
+            .padding(30, 0, 30, 0);
+            background-color: transparent;
+    
+            &__item {
+                background-color: @black;
+                .padding(0, 30, 0, 30);
+    
+                &_first>div {
+                    border-bottom: none;
+                    .padding(10, 30, 40, 30);
+                }
+    
+                &_second>div {
+                    border-bottom: none;
+                    .padding(10, 30, 40, 30);
+                }
+    
+                &_third>div {
+                    .padding(20, 30, 40, 15);
+                }
+    
+                &_fourth>div {
+                    .padding(20, 30, 40, 15);
+                }
+            }
+    
+            &__item>div h4 {
+                .font-size(120);
+            }
+    
+            &__item>div div {
+                .font-size(30);
+            }
+    
+            &-devider {
+                display: none;
+            }
+        }
+    }
+}

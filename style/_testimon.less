@@ -1,0 +1,140 @@
+// main: style.less
+
+.testimon {
+    &-content {
+        display: none;
+        width: 100%;
+        .padding(65, 100, 0, 85);
+    }
+
+    &-title {
+        .title;
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, calc((222 / 16) * 1rem));
+        .gap(19);
+        .padding(0, 5, 0, 27);
+    }
+
+    &-item {
+        background-color: @black;
+        .padding(23, 20, 20, 20);
+        display: grid;
+        grid-template-columns: 37% 60%;
+        grid-template-rows: 73% 10%;
+        column-gap: 5%;
+        row-gap: 10%;
+
+        &-title {
+            .font-size(34);
+            .line-height(50);
+            font-family: 'catamaran';
+            font-weight: 900;
+            color: @main-color;
+        }
+
+        &-subtitle {
+            .font-size(16);
+            font-family: 'catamaran';
+            font-weight: 900;
+            .margin-top(-6);
+            color: @white;
+        }
+
+        &-text {
+            color: @white;
+            text-align: justify;
+        }
+
+        &-photo {
+            background-color: #fff;
+        }
+
+        &-photo img {
+            width: 100%;
+            height: max-content;
+        }
+
+        &-date {
+            color: white;
+        }
+
+        &-stars {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .padding(0, 5, 0, 5);
+            & div {
+                .width(15);
+                .height(15);
+
+                & img {
+                    width: 100%;
+                    height: max-content;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px ) {
+    .testimon {
+        &-content {
+            display: none;
+            .padding(10, 10, 10, 10);
+        }
+    
+        &-title {
+            .padding(45, 0, 20, 0);
+            height: max-content;
+            border: calc((6 / 16) * 1rem) dotted black;
+        }
+
+        &-title h2 {
+            .font-size(180);
+        }
+    
+        &-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, calc((700 / 16) * 1rem));
+            .gap(19);
+            .padding(0, 27, 0, 27);
+        }
+    
+        &-item {
+            .margin-top(30);
+            .padding(45, 45, 45, 45);
+            grid-template-columns: 35% 60%;
+            grid-template-rows: 73% 10%;
+    
+            &-title {
+                .font-size(120);
+                .margin-top(30);
+            }
+    
+            &-subtitle {
+                .font-size(85);
+                .margin-top(30);
+            }
+    
+            &-text {
+                .font-size(57);
+                .margin-top(30);
+            }
+    
+            &-photo {
+                overflow: hidden;
+            }
+    
+            &-stars {
+                & div {
+                    .width(55);
+                    .height(55);
+                }
+            }
+        }
+    }
+}
